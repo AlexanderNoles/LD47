@@ -21,6 +21,7 @@ public class DoorAnimation : MonoBehaviour
         ani.SetBool("open", Physics2D.OverlapBox(transform.position, new Vector2(5, 5), 0f, whatIsPlayer));
         if (PlayerManagment.wonLevel)
         {
+            Debug.Log("lmao");
             circle.transform.localScale = new Vector3(Scale,Scale);
             Scale += constant * Time.deltaTime;
         }

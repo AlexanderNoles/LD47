@@ -841,7 +841,7 @@ PrefabInstance:
     - target: {fileID: 8468505906147483866, guid: 295661db3a07b5c4dace2d43da65399c,
         type: 3}
       propertyPath: levelDifficulty
-      value: 0.8
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 8468505906147483867, guid: 295661db3a07b5c4dace2d43da65399c,
         type: 3}
@@ -1067,7 +1067,7 @@ Transform:
   m_LocalScale: {x: 43.295197, y: 31.395681, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2102604628
 PrefabInstance:

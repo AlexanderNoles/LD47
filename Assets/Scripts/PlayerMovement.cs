@@ -17,9 +17,11 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask whatIsGround;
     public LayerMask whatIsPlatforms;
     private LayerMask finalmask;
+    public bool groundedLastFrame;
 
     [Header("Audio")]
     public AudioSource jumpAudio;
+    public AudioSource landAudio;
 
     private void Start()
     {
@@ -66,6 +68,13 @@ public class PlayerMovement : MonoBehaviour
             platformDelay -= Time.deltaTime;
             Debug.Log(platformDelay);
         }
+
+        if (groundedLastFrame != grounded())
+        {
+            landAudio.Play();
+        }
+
+        groundedLastFrame = grounded();
     }
 
     private void FixedUpdate()

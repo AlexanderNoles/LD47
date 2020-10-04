@@ -26,6 +26,11 @@ public class PlayerManagment : MonoBehaviour
             StartCoroutine("load");
         }
 
+        if (col.CompareTag("ExitDoorAlt") && !lm.playerKilled)
+        {
+            wonLevel = true;
+        }
+
         else if (col.CompareTag("KillBox"))
         {
             wonLevel = true;
@@ -59,6 +64,11 @@ public class PlayerManagment : MonoBehaviour
             transitionCircle.transform.position = transform.position;
             deadPosList = new List<Vector3>();
             StartCoroutine("hitbox");
+        }
+
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            SceneManager.LoadScene(0);
         }
     }
 }
